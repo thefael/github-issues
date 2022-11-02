@@ -1,5 +1,5 @@
-import Foundation
 import UIKit
+import SnapKit
 
 final class IssueListView: UIView {
     lazy var tableView: UITableView = {
@@ -19,11 +19,9 @@ final class IssueListView: UIView {
 
 extension IssueListView {
     func setupConstraints() {
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(tableView)
-        tableView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        tableView.snp.makeConstraints { 
+            $0.edges.equalToSuperview()
+        }
     }
 }

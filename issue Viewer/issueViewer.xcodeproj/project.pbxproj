@@ -79,7 +79,7 @@
 		A882027A2910B19700D8E411 /* issueViewer */ = {
 			isa = PBXGroup;
 			children = (
-				A88202902910B61B00D8E411 /* General */,
+				A88202902910B61B00D8E411 /* Application */,
 				A882028F2910B60700D8E411 /* Issues */,
 			);
 			path = issueViewer;
@@ -88,17 +88,14 @@
 		A882028F2910B60700D8E411 /* Issues */ = {
 			isa = PBXGroup;
 			children = (
-				A882027F2910B19700D8E411 /* IssueViewController.swift */,
+				A8B806572912CCD60025B786 /* View */,
 				A88202912910B6FF00D8E411 /* IssueListFactory.swift */,
-				A88202932910B75D00D8E411 /* IssueListView.swift */,
-				A88202952910B79900D8E411 /* TableViewDataSource.swift */,
-				A88202972910BA8A00D8E411 /* IssueCell.swift */,
 				A88202992910BABB00D8E411 /* IssueItem.swift */,
 			);
 			path = Issues;
 			sourceTree = "<group>";
 		};
-		A88202902910B61B00D8E411 /* General */ = {
+		A88202902910B61B00D8E411 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				A88202892910B19800D8E411 /* Info.plist */,
@@ -107,7 +104,18 @@
 				A882027D2910B19700D8E411 /* SceneDelegate.swift */,
 				A882027B2910B19700D8E411 /* AppDelegate.swift */,
 			);
-			path = General;
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A8B806572912CCD60025B786 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A88202952910B79900D8E411 /* TableViewDataSource.swift */,
+				A88202972910BA8A00D8E411 /* IssueCell.swift */,
+				A88202932910B75D00D8E411 /* IssueListView.swift */,
+				A882027F2910B19700D8E411 /* IssueViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E79BAFAE60ABF127786A1EA0 /* Pods */ = {
@@ -116,7 +124,6 @@
 				F30E21E2B13AC905D1497839 /* Pods-issueViewer.debug.xcconfig */,
 				2B111D5E5302FEEE95E6D9CD /* Pods-issueViewer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

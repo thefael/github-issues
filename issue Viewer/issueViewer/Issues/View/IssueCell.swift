@@ -1,4 +1,5 @@
 import UIKit
+import SnapKit
 
 final class IssueCell: UITableViewCell {
     fileprivate enum Layout { }
@@ -26,12 +27,13 @@ final class IssueCell: UITableViewCell {
     }
     // TODO: add snapkit pod
     private func setupLabelConstraints() {
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(descriptionLabel)
-        descriptionLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Layout.descriptionPadding.top).isActive = true
-        descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Layout.descriptionPadding.leading).isActive = true
-        descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        descriptionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: Layout.descriptionPadding.bottom).isActive = true
+        descriptionLabel.snp.makeConstraints { 
+            $0.top.equalToSuperview().offset(Layout.descriptionPadding.top)
+            $0.leading.equalToSuperview().offset(Layout.descriptionPadding.leading)
+            $0.trailing.equalToSuperview().offset(Layout.descriptionPadding.leading)
+            $0.bottom.equalToSuperview().offset(Layout.descriptionPadding.bottom)
+        }
     }
 }
 
