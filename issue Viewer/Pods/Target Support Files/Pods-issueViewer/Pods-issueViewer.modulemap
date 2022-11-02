@@ -1,0 +1,6 @@
+module Pods_issueViewer {
+  umbrella header "Pods-issueViewer-umbrella.h"
+
+  export *
+  module * { export * }
+}
