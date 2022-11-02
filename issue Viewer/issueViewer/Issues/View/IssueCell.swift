@@ -11,12 +11,21 @@ final class IssueCell: UITableViewCell {
     
     private var stateTag: TagView = {
         let tag = TagView()
+        tag.setText(text: "testezão", font: .systemFont(ofSize: 12, weight: .bold), color: .white)
+        tag.setBackgroundColor(.red)
         return tag
+    }()
+    
+    private lazy var stackView: UIStackView = {
+        let view = UIStackView(arrangedSubviews: [stateTag, descriptionLabel])
+        view.axis = .vertical
+        view.alignment = .leading
+        return view
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupLabelConstraints()
+        setupConstraints()
     }
     
     @available(*, unavailable)
@@ -25,26 +34,22 @@ final class IssueCell: UITableViewCell {
     func configureCell(with text: String) {
         descriptionLabel.text = text
     }
-    // TODO: add snapkit pod
-    private func setupLabelConstraints() {
-        contentView.addSubview(descriptionLabel)
-        descriptionLabel.snp.makeConstraints { 
-            $0.top.equalToSuperview().offset(Layout.descriptionPadding.top)
-            $0.leading.equalToSuperview().offset(Layout.descriptionPadding.leading)
-            $0.trailing.equalToSuperview().offset(Layout.descriptionPadding.leading)
-            $0.bottom.equalToSuperview().offset(Layout.descriptionPadding.bottom)
+    
+    private func setupConstraints() {
+        contentView.addSubview(stackView)
+        stackView.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(Layout.stackPadding.top)
+            $0.leading.equalToSuperview().offset(Layout.stackPadding.leading)
+            $0.trailing.equalToSuperview().offset(Layout.stackPadding.leading)
+            $0.bottom.equalToSuperview().offset(Layout.stackPadding.bottom)
         }
     }
 }
 
 extension IssueCell.Layout {
-    static var descriptionPadding: (top: CGFloat, leading: CGFloat, trailing: CGFloat, bottom: CGFloat) = (20, 50, 0, -20)
+    static var stackPadding: (top: CGFloat, leading: CGFloat, trailing: CGFloat, bottom: CGFloat) = (20, 50, 0, -20)
 }
 
 extension UITableViewCell {
     static var identifier: String = String(describing: UITableViewCell.self)
-}
-
-final class TagView: UIView {
-    // TODO: build tagView
 }

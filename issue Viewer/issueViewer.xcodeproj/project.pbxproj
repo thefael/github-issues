@@ -18,6 +18,7 @@
 		A88202962910B79900D8E411 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88202952910B79900D8E411 /* TableViewDataSource.swift */; };
 		A88202982910BA8A00D8E411 /* IssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88202972910BA8A00D8E411 /* IssueCell.swift */; };
 		A882029A2910BABB00D8E411 /* IssueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88202992910BABB00D8E411 /* IssueItem.swift */; };
+		A8B8065B2912CDB30025B786 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B8065A2912CDB30025B786 /* TagView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		A88202952910B79900D8E411 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		A88202972910BA8A00D8E411 /* IssueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCell.swift; sourceTree = "<group>"; };
 		A88202992910BABB00D8E411 /* IssueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueItem.swift; sourceTree = "<group>"; };
+		A8B8065A2912CDB30025B786 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		F30E21E2B13AC905D1497839 /* Pods-issueViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-issueViewer.debug.xcconfig"; path = "Target Support Files/Pods-issueViewer/Pods-issueViewer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 		A882027A2910B19700D8E411 /* issueViewer */ = {
 			isa = PBXGroup;
 			children = (
+				A8B806592912CD910025B786 /* ReusableViews */,
 				A88202902910B61B00D8E411 /* Application */,
 				A882028F2910B60700D8E411 /* Issues */,
 			);
@@ -116,6 +119,14 @@
 				A882027F2910B19700D8E411 /* IssueViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A8B806592912CD910025B786 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				A8B8065A2912CDB30025B786 /* TagView.swift */,
+			);
+			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 		E79BAFAE60ABF127786A1EA0 /* Pods */ = {
@@ -231,6 +242,7 @@
 				A882027C2910B19700D8E411 /* AppDelegate.swift in Sources */,
 				A88202922910B6FF00D8E411 /* IssueListFactory.swift in Sources */,
 				A882027E2910B19700D8E411 /* SceneDelegate.swift in Sources */,
+				A8B8065B2912CDB30025B786 /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +384,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PC9YQ322VG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = issueViewer/General/Info.plist;
+				INFOPLIST_FILE = issueViewer/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -400,7 +412,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PC9YQ322VG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = issueViewer/General/Info.plist;
+				INFOPLIST_FILE = issueViewer/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
