@@ -9,19 +9,29 @@
 /* Begin PBXBuildFile section */
 		A882027C2910B19700D8E411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882027B2910B19700D8E411 /* AppDelegate.swift */; };
 		A882027E2910B19700D8E411 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882027D2910B19700D8E411 /* SceneDelegate.swift */; };
-		A88202802910B19700D8E411 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882027F2910B19700D8E411 /* ViewController.swift */; };
+		A88202802910B19700D8E411 /* IssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882027F2910B19700D8E411 /* IssueViewController.swift */; };
 		A88202852910B19800D8E411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A88202842910B19800D8E411 /* Assets.xcassets */; };
 		A88202882910B19800D8E411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A88202862910B19800D8E411 /* LaunchScreen.storyboard */; };
+		A88202922910B6FF00D8E411 /* IssueListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88202912910B6FF00D8E411 /* IssueListFactory.swift */; };
+		A88202942910B75D00D8E411 /* IssueListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88202932910B75D00D8E411 /* IssueListView.swift */; };
+		A88202962910B79900D8E411 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88202952910B79900D8E411 /* TableViewDataSource.swift */; };
+		A88202982910BA8A00D8E411 /* IssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88202972910BA8A00D8E411 /* IssueCell.swift */; };
+		A882029A2910BABB00D8E411 /* IssueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88202992910BABB00D8E411 /* IssueItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A88202782910B19700D8E411 /* issue Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "issue Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A882027B2910B19700D8E411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A882027D2910B19700D8E411 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A882027F2910B19700D8E411 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A882027F2910B19700D8E411 /* IssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewController.swift; sourceTree = "<group>"; };
 		A88202842910B19800D8E411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A88202872910B19800D8E411 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A88202892910B19800D8E411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A88202912910B6FF00D8E411 /* IssueListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListFactory.swift; sourceTree = "<group>"; };
+		A88202932910B75D00D8E411 /* IssueListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListView.swift; sourceTree = "<group>"; };
+		A88202952910B79900D8E411 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		A88202972910BA8A00D8E411 /* IssueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCell.swift; sourceTree = "<group>"; };
+		A88202992910BABB00D8E411 /* IssueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,35 @@
 		A882027A2910B19700D8E411 /* issue Viewer */ = {
 			isa = PBXGroup;
 			children = (
-				A882027B2910B19700D8E411 /* AppDelegate.swift */,
-				A882027D2910B19700D8E411 /* SceneDelegate.swift */,
-				A882027F2910B19700D8E411 /* ViewController.swift */,
-				A88202842910B19800D8E411 /* Assets.xcassets */,
-				A88202862910B19800D8E411 /* LaunchScreen.storyboard */,
-				A88202892910B19800D8E411 /* Info.plist */,
+				A88202902910B61B00D8E411 /* General */,
+				A882028F2910B60700D8E411 /* Issues */,
 			);
 			path = "issue Viewer";
+			sourceTree = "<group>";
+		};
+		A882028F2910B60700D8E411 /* Issues */ = {
+			isa = PBXGroup;
+			children = (
+				A882027F2910B19700D8E411 /* IssueViewController.swift */,
+				A88202912910B6FF00D8E411 /* IssueListFactory.swift */,
+				A88202932910B75D00D8E411 /* IssueListView.swift */,
+				A88202952910B79900D8E411 /* TableViewDataSource.swift */,
+				A88202972910BA8A00D8E411 /* IssueCell.swift */,
+				A88202992910BABB00D8E411 /* IssueItem.swift */,
+			);
+			path = Issues;
+			sourceTree = "<group>";
+		};
+		A88202902910B61B00D8E411 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				A88202892910B19800D8E411 /* Info.plist */,
+				A88202862910B19800D8E411 /* LaunchScreen.storyboard */,
+				A88202842910B19800D8E411 /* Assets.xcassets */,
+				A882027D2910B19700D8E411 /* SceneDelegate.swift */,
+				A882027B2910B19700D8E411 /* AppDelegate.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,7 +130,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A88202732910B19700D8E411 /* Build configuration list for PBXProject "issue Viewer" */;
+			buildConfigurationList = A88202732910B19700D8E411 /* Build configuration list for PBXProject "issueViewer" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -134,8 +165,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A88202802910B19700D8E411 /* ViewController.swift in Sources */,
+				A88202982910BA8A00D8E411 /* IssueCell.swift in Sources */,
+				A88202962910B79900D8E411 /* TableViewDataSource.swift in Sources */,
+				A882029A2910BABB00D8E411 /* IssueItem.swift in Sources */,
+				A88202942910B75D00D8E411 /* IssueListView.swift in Sources */,
+				A88202802910B19700D8E411 /* IssueViewController.swift in Sources */,
 				A882027C2910B19700D8E411 /* AppDelegate.swift in Sources */,
+				A88202922910B6FF00D8E411 /* IssueListFactory.swift in Sources */,
 				A882027E2910B19700D8E411 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,7 +313,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PC9YQ322VG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "issue Viewer/Info.plist";
+				INFOPLIST_FILE = "issue Viewer/General/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -304,7 +340,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PC9YQ322VG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "issue Viewer/Info.plist";
+				INFOPLIST_FILE = "issue Viewer/General/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -325,7 +361,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A88202732910B19700D8E411 /* Build configuration list for PBXProject "issue Viewer" */ = {
+		A88202732910B19700D8E411 /* Build configuration list for PBXProject "issueViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A882028A2910B19800D8E411 /* Debug */,
