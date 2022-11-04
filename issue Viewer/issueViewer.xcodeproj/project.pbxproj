@@ -20,6 +20,7 @@
 		A88202962910B79900D8E411 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88202952910B79900D8E411 /* TableViewDataSource.swift */; };
 		A88202982910BA8A00D8E411 /* IssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88202972910BA8A00D8E411 /* IssueCell.swift */; };
 		A882029A2910BABB00D8E411 /* IssueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88202992910BABB00D8E411 /* IssueItem.swift */; };
+		A894056E2915740A0071DC20 /* IssueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894056D2915740A0071DC20 /* IssueViewModel.swift */; };
 		A89501502914A9460077C65B /* IssuesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895014F2914A9460077C65B /* IssuesInteractor.swift */; };
 		A8B8065B2912CDB30025B786 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B8065A2912CDB30025B786 /* TagView.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		A88202952910B79900D8E411 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		A88202972910BA8A00D8E411 /* IssueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCell.swift; sourceTree = "<group>"; };
 		A88202992910BABB00D8E411 /* IssueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueItem.swift; sourceTree = "<group>"; };
+		A894056D2915740A0071DC20 /* IssueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewModel.swift; sourceTree = "<group>"; };
 		A895014F2914A9460077C65B /* IssuesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesInteractor.swift; sourceTree = "<group>"; };
 		A8B8065A2912CDB30025B786 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		F30E21E2B13AC905D1497839 /* Pods-issueViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-issueViewer.debug.xcconfig"; path = "Target Support Files/Pods-issueViewer/Pods-issueViewer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				A8742AEA29133D7E00A7B8EB /* IssuesPresenter.swift */,
+				A894056D2915740A0071DC20 /* IssueViewModel.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				A8742AEB29133D7E00A7B8EB /* IssuesPresenter.swift in Sources */,
 				A88202982910BA8A00D8E411 /* IssueCell.swift in Sources */,
 				A88202962910B79900D8E411 /* TableViewDataSource.swift in Sources */,
+				A894056E2915740A0071DC20 /* IssueViewModel.swift in Sources */,
 				A882029A2910BABB00D8E411 /* IssueItem.swift in Sources */,
 				A8742AE929133D0300A7B8EB /* URLSessionService.swift in Sources */,
 				A88202942910B75D00D8E411 /* IssueListView.swift in Sources */,

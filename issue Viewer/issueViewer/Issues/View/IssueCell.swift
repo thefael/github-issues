@@ -11,7 +11,6 @@ final class IssueCell: UITableViewCell {
     
     private var stateTag: TagView = {
         let tag = TagView()
-        tag.setText(text: "testezão", font: .systemFont(ofSize: 12, weight: .bold), color: .white)
         tag.setBackgroundColor(.red)
         return tag
     }()
@@ -19,6 +18,7 @@ final class IssueCell: UITableViewCell {
     private lazy var stackView: UIStackView = {
         let view = UIStackView(arrangedSubviews: [stateTag, descriptionLabel])
         view.axis = .vertical
+        view.spacing = 8
         view.alignment = .leading
         return view
     }()
@@ -31,8 +31,14 @@ final class IssueCell: UITableViewCell {
     @available(*, unavailable)
     required init?(coder: NSCoder) { nil }
     
-    func configureCell(with text: String) {
-        descriptionLabel.text = text
+    func configureCell(with viewModel: IssueViewModel) {
+        descriptionLabel.text = viewModel.title
+        stateTag.setText(
+            text: viewModel.state.text, 
+            font: .systemFont(ofSize: 12, weight: .bold), 
+            color: viewModel.state.textColor
+        )
+        stateTag.setBackgroundColor(viewModel.state.backgoundColor)
     }
     
     private func setupConstraints() {
@@ -47,7 +53,7 @@ final class IssueCell: UITableViewCell {
 }
 
 extension IssueCell.Layout {
-    static var stackPadding: (top: CGFloat, leading: CGFloat, trailing: CGFloat, bottom: CGFloat) = (20, 50, 0, -20)
+    static var stackPadding: (top: CGFloat, leading: CGFloat, trailing: CGFloat, bottom: CGFloat) = (10, 20, 0, -10)
 }
 
 extension UITableViewCell {
