@@ -1,13 +1,12 @@
 import Foundation
 
 protocol IssuesInteracting {
-    func loadData()
+    func loadData(fromURL url: URL)
 }
 
 final class IssuesInteractor {
     private let presenter: IssuesPresenting
     private let service: URLSessionServicing
-    private let issuesPath: URL? = URL(string: "https://api.github.com/repos/apple/swift/issues")
     
     init(presenter: IssuesPresenting, service: URLSessionServicing) {
         self.presenter = presenter
@@ -16,8 +15,7 @@ final class IssuesInteractor {
 }
 
 extension IssuesInteractor: IssuesInteracting {
-    func loadData() {
-        guard let url = issuesPath else { return }
+    func loadData(fromURL url: URL) {
         service.fetchData(fromURL: url) { (result: Result<[IssueItem], FetchError>) in
             switch result {
             case .success(let items):

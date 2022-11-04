@@ -19,7 +19,7 @@ final class IssueListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        interactor.loadData()
+        interactor.loadData(fromURL: .githubIssues)
         dataSource.configureCell = { cell, viewModel in
             cell.configureCell(with: viewModel)
         }
