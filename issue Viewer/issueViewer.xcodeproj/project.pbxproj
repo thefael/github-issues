@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A7BD1051AC39088688322021 /* libPods-issueViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 365F8C9E11DDBF37D33A5C4F /* libPods-issueViewer.a */; };
+		A8742AE929133D0300A7B8EB /* URLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8742AE829133D0300A7B8EB /* URLSessionService.swift */; };
+		A8742AEB29133D7E00A7B8EB /* IssuesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8742AEA29133D7E00A7B8EB /* IssuesPresenter.swift */; };
 		A882027C2910B19700D8E411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882027B2910B19700D8E411 /* AppDelegate.swift */; };
 		A882027E2910B19700D8E411 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882027D2910B19700D8E411 /* SceneDelegate.swift */; };
 		A88202802910B19700D8E411 /* IssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882027F2910B19700D8E411 /* IssueViewController.swift */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		2B111D5E5302FEEE95E6D9CD /* Pods-issueViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-issueViewer.release.xcconfig"; path = "Target Support Files/Pods-issueViewer/Pods-issueViewer.release.xcconfig"; sourceTree = "<group>"; };
 		365F8C9E11DDBF37D33A5C4F /* libPods-issueViewer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-issueViewer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8742AE829133D0300A7B8EB /* URLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionService.swift; sourceTree = "<group>"; };
+		A8742AEA29133D7E00A7B8EB /* IssuesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesPresenter.swift; sourceTree = "<group>"; };
 		A88202782910B19700D8E411 /* issueViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = issueViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A882027B2910B19700D8E411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A882027D2910B19700D8E411 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,8 +85,8 @@
 		A882027A2910B19700D8E411 /* issueViewer */ = {
 			isa = PBXGroup;
 			children = (
-				A8B806592912CD910025B786 /* ReusableViews */,
 				A88202902910B61B00D8E411 /* Application */,
+				A8B806592912CD910025B786 /* ReusableViews */,
 				A882028F2910B60700D8E411 /* Issues */,
 			);
 			path = issueViewer;
@@ -91,9 +95,11 @@
 		A882028F2910B60700D8E411 /* Issues */ = {
 			isa = PBXGroup;
 			children = (
+				A895014E291461D60077C65B /* Interactor */,
+				A895014D291461CB0077C65B /* Presenter */,
+				A895014C291461BE0077C65B /* Networking */,
 				A8B806572912CCD60025B786 /* View */,
 				A88202912910B6FF00D8E411 /* IssueListFactory.swift */,
-				A88202992910BABB00D8E411 /* IssueItem.swift */,
 			);
 			path = Issues;
 			sourceTree = "<group>";
@@ -108,6 +114,30 @@
 				A882027B2910B19700D8E411 /* AppDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		A895014C291461BE0077C65B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A88202992910BABB00D8E411 /* IssueItem.swift */,
+				A8742AE829133D0300A7B8EB /* URLSessionService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A895014D291461CB0077C65B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A8742AEA29133D7E00A7B8EB /* IssuesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A895014E291461D60077C65B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		A8B806572912CCD60025B786 /* View */ = {
@@ -234,9 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8742AEB29133D7E00A7B8EB /* IssuesPresenter.swift in Sources */,
 				A88202982910BA8A00D8E411 /* IssueCell.swift in Sources */,
 				A88202962910B79900D8E411 /* TableViewDataSource.swift in Sources */,
 				A882029A2910BABB00D8E411 /* IssueItem.swift in Sources */,
+				A8742AE929133D0300A7B8EB /* URLSessionService.swift in Sources */,
 				A88202942910B75D00D8E411 /* IssueListView.swift in Sources */,
 				A88202802910B19700D8E411 /* IssueViewController.swift in Sources */,
 				A882027C2910B19700D8E411 /* AppDelegate.swift in Sources */,
@@ -380,9 +412,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PC9YQ322VG;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = issueViewer/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -396,6 +429,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "faelzin.issue-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -408,9 +442,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PC9YQ322VG;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = issueViewer/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -424,6 +459,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "faelzin.issue-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
