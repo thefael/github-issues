@@ -1,6 +1,6 @@
 import UIKit
 
-final class TableViewDataSource<T: Decodable, Cell: UITableViewCell>: NSObject, UITableViewDataSource {
+final class TableViewDataSource<T, Cell: UITableViewCell>: NSObject, UITableViewDataSource {
     var items: [T]?
     var configureCell: ((Cell, T) -> Void)?
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

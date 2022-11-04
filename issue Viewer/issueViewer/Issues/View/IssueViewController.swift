@@ -1,7 +1,12 @@
 import UIKit
 
+protocol IssueListDisplaying: AnyObject {
+    func display(items: [IssueViewModel])
+}
+
 final class IssueListViewController: UIViewController {
-    let dataSource = TableViewDataSource<String, IssueCell>()
+    private let interactor: IssuesInteracting
+    let dataSource = TableViewDataSource<IssueViewModel, IssueCell>()
     lazy var issueListView: IssueListView = {
         let view = IssueListView()
         view.tableView.dataSource = dataSource
@@ -14,9 +19,26 @@ final class IssueListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataSource.items = ["teste", "teste2", "teste3"]
-        dataSource.configureCell = { cell, text in
-            cell.configureCell(with: text)
+        interactor.loadData()
+        dataSource.configureCell = { cell, viewModel in
+            cell.configureCell(with: viewModel)
+        }
+    }
+    
+    init(interactor: IssuesInteracting) {
+        self.interactor = interactor
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) { nil }
+}
+
+extension IssueListViewController: IssueListDisplaying {
+    func display(items: [IssueViewModel]) {
+        dataSource.items = items
+        DispatchQueue.main.async {
+            self.issueListView.tableView.reloadData()
         }
     }
 }
