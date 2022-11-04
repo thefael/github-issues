@@ -1,0 +1,6 @@
+module Pods_issueViewerTests {
+  umbrella header "Pods-issueViewerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
