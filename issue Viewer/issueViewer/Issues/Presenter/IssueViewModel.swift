@@ -1,6 +1,6 @@
 import UIKit
 
-struct IssueViewModel {
+struct IssueViewModel: Equatable {
     let title: String
     let state: String
     let colors: TagView.Colors

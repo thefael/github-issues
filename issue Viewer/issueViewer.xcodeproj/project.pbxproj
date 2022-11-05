@@ -29,6 +29,8 @@
 		A894058429157B3B0071DC20 /* IssuesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894058329157B3B0071DC20 /* IssuesInteractorTests.swift */; };
 		A89501502914A9460077C65B /* IssuesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895014F2914A9460077C65B /* IssuesInteractor.swift */; };
 		A8B8065B2912CDB30025B786 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B8065A2912CDB30025B786 /* TagView.swift */; };
+		A8E9BBFF2916B498007C173F /* IssuesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9BBFE2916B498007C173F /* IssuesPresenterTests.swift */; };
+		A8E9BC012916B550007C173F /* IssueListDisplayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9BC002916B550007C173F /* IssueListDisplayMock.swift */; };
 		FB8B50BB319AF715B977F3EA /* libPods-issueViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EAE4104CEBECCB0C4520A93 /* libPods-issueViewer.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,8 @@
 		A8B8065A2912CDB30025B786 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		A8DCA2B229158884004E6EDF /* libSnapKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSnapKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DCA2B6291588DE004E6EDF /* libSnapKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSnapKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8E9BBFE2916B498007C173F /* IssuesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IssuesPresenterTests.swift; path = IssueViewerTests/IssuesPresenterTests.swift; sourceTree = SOURCE_ROOT; };
+		A8E9BC002916B550007C173F /* IssueListDisplayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IssueListDisplayMock.swift; path = IssueViewerTests/Mocks/IssueListDisplayMock.swift; sourceTree = SOURCE_ROOT; };
 		D87AF3857BCADE291FCB6A99 /* Pods-issueViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-issueViewer.release.xcconfig"; path = "Target Support Files/Pods-issueViewer/Pods-issueViewer.release.xcconfig"; sourceTree = "<group>"; };
 		E16DCFAE8892229098B7FFA0 /* Pods-issueViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-issueViewerTests.debug.xcconfig"; path = "Target Support Files/Pods-issueViewerTests/Pods-issueViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +173,7 @@
 				A894057E291579240071DC20 /* Mocks */,
 				A8940577291579160071DC20 /* issueViewerTests.swift */,
 				A894058329157B3B0071DC20 /* IssuesInteractorTests.swift */,
+				A8E9BBFE2916B498007C173F /* IssuesPresenterTests.swift */,
 			);
 			path = issueViewerTests;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 			children = (
 				A894057F291579340071DC20 /* URLSessionServiceMock.swift */,
 				A894058129157AD50071DC20 /* IssuesPresenterMock.swift */,
+				A8E9BC002916B550007C173F /* IssueListDisplayMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -410,7 +416,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8E9BC012916B550007C173F /* IssueListDisplayMock.swift in Sources */,
 				A894058429157B3B0071DC20 /* IssuesInteractorTests.swift in Sources */,
+				A8E9BBFF2916B498007C173F /* IssuesPresenterTests.swift in Sources */,
 				A8940580291579340071DC20 /* URLSessionServiceMock.swift in Sources */,
 				A8940578291579160071DC20 /* issueViewerTests.swift in Sources */,
 				A894058229157AD50071DC20 /* IssuesPresenterMock.swift in Sources */,

@@ -52,7 +52,7 @@ final class TagView: UIView {
 }
 
 extension TagView {
-    struct Colors {
+    struct Colors: Equatable {
         let background: UIColor
         let title: UIColor
         let border: UIColor
