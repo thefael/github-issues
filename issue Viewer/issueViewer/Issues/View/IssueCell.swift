@@ -6,19 +6,19 @@ final class IssueCell: UITableViewCell {
     private var descriptionLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.textColor = .hexToUIColor(hex: "c7d2d9")
         return label
     }()
     
     private var stateTag: TagView = {
         let tag = TagView()
-        tag.setBackgroundColor(.red)
         return tag
     }()
     
     private lazy var stackView: UIStackView = {
         let view = UIStackView(arrangedSubviews: [stateTag, descriptionLabel])
         view.axis = .vertical
-        view.spacing = 8
+        view.spacing = 10
         view.alignment = .leading
         return view
     }()
@@ -26,6 +26,7 @@ final class IssueCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupConstraints()
+        backgroundColor = .hexToUIColor(hex: "161b22")
     }
     
     @available(*, unavailable)
@@ -34,11 +35,10 @@ final class IssueCell: UITableViewCell {
     func configureCell(with viewModel: IssueViewModel) {
         descriptionLabel.text = viewModel.title
         stateTag.setText(
-            text: viewModel.state.text, 
-            font: .systemFont(ofSize: 12, weight: .bold), 
-            color: viewModel.state.textColor
+            text: viewModel.state, 
+            font: .systemFont(ofSize: 12, weight: .bold)
         )
-        stateTag.setBackgroundColor(viewModel.state.backgoundColor)
+        stateTag.setColors(colors: viewModel.colors)
     }
     
     private func setupConstraints() {
@@ -53,7 +53,7 @@ final class IssueCell: UITableViewCell {
 }
 
 extension IssueCell.Layout {
-    static var stackPadding: (top: CGFloat, leading: CGFloat, trailing: CGFloat, bottom: CGFloat) = (10, 20, 0, -10)
+    static var stackPadding: (top: CGFloat, leading: CGFloat, trailing: CGFloat, bottom: CGFloat) = (15, 20, 0, -10)
 }
 
 extension UITableViewCell {

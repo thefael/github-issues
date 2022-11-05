@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		21ECB79AF5CF3B35F749D530 /* libPods-issueViewerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0771E603E20004AA51B882 /* libPods-issueViewerTests.a */; };
 		A833E2512915960800D545AA /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833E2502915960800D545AA /* URL+Extensions.swift */; };
+		A833E2532915A6B700D545AA /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833E2522915A6B700D545AA /* UIColor+Extensions.swift */; };
 		A8742AE929133D0300A7B8EB /* URLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8742AE829133D0300A7B8EB /* URLSessionService.swift */; };
 		A8742AEB29133D7E00A7B8EB /* IssuesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8742AEA29133D7E00A7B8EB /* IssuesPresenter.swift */; };
 		A882027C2910B19700D8E411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882027B2910B19700D8E411 /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 		5EAE4104CEBECCB0C4520A93 /* libPods-issueViewer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-issueViewer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6F0BA922B769ACFC22991B /* Pods-issueViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-issueViewerTests.release.xcconfig"; path = "Target Support Files/Pods-issueViewerTests/Pods-issueViewerTests.release.xcconfig"; sourceTree = "<group>"; };
 		A833E2502915960800D545AA /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		A833E2522915A6B700D545AA /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		A8742AE829133D0300A7B8EB /* URLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionService.swift; sourceTree = "<group>"; };
 		A8742AEA29133D7E00A7B8EB /* IssuesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesPresenter.swift; sourceTree = "<group>"; };
 		A88202782910B19700D8E411 /* issueViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = issueViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +134,7 @@
 				A88202902910B61B00D8E411 /* Application */,
 				A8B806592912CD910025B786 /* ReusableViews */,
 				A882028F2910B60700D8E411 /* Issues */,
+				A833E2522915A6B700D545AA /* UIColor+Extensions.swift */,
 			);
 			path = issueViewer;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A89501502914A9460077C65B /* IssuesInteractor.swift in Sources */,
+				A833E2532915A6B700D545AA /* UIColor+Extensions.swift in Sources */,
 				A833E2512915960800D545AA /* URL+Extensions.swift in Sources */,
 				A8742AEB29133D7E00A7B8EB /* IssuesPresenter.swift in Sources */,
 				A88202982910BA8A00D8E411 /* IssueCell.swift in Sources */,
