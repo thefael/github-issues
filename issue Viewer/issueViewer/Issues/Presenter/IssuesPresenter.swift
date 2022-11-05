@@ -28,6 +28,6 @@ extension IssuesPresenter: IssuesPresenting {
     }
     
     func presentIssueDetail(forItem item: IssueItem) {
-        coordinator.openIssueDetail()
+        coordinator.openIssueDetail(withItem: item)
     }
 }

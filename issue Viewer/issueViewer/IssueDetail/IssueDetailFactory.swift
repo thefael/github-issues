@@ -1,7 +1,7 @@
 import UIKit
 
 enum IssueDetailFactory {
-    static func make() -> IssueDetailViewController {
+    static func make(withItem item: IssueItem) -> IssueDetailViewController {
         .init()
     }
 }

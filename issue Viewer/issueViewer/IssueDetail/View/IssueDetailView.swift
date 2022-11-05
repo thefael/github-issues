@@ -31,13 +31,13 @@ final class IssueDetailView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "é o caraio"
+        label.text = "teste"
         return label
     }()
     
     private let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "é isso aí po"
+        label.text = "teste descrição"
         return label
     }()
     

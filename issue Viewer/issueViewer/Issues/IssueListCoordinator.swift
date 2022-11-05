@@ -1,7 +1,7 @@
 import UIKit
 
 protocol IssueListCoordinating {
-    func openIssueDetail()
+    func openIssueDetail(withItem item: IssueItem)
 }
 
 final class IssueListCoordinator: IssueListCoordinating {
@@ -11,8 +11,8 @@ final class IssueListCoordinator: IssueListCoordinating {
         self.navigationController = navigationController
     }
     
-    func openIssueDetail() {
-        let issueDetailViewController = IssueDetailFactory.make()
+    func openIssueDetail(withItem item: IssueItem) {
+        let issueDetailViewController = IssueDetailFactory.make(withItem: item)
         navigationController?.pushViewController(issueDetailViewController, animated: true)
     }
 }
