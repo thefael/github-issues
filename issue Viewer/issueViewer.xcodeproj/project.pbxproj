@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		21ECB79AF5CF3B35F749D530 /* libPods-issueViewerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0771E603E20004AA51B882 /* libPods-issueViewerTests.a */; };
 		A833E2512915960800D545AA /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833E2502915960800D545AA /* URL+Extensions.swift */; };
+		A833E2532915A6B700D545AA /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833E2522915A6B700D545AA /* UIColor+Extensions.swift */; };
 		A8742AE929133D0300A7B8EB /* URLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8742AE829133D0300A7B8EB /* URLSessionService.swift */; };
 		A8742AEB29133D7E00A7B8EB /* IssuesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8742AEA29133D7E00A7B8EB /* IssuesPresenter.swift */; };
 		A882027C2910B19700D8E411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A882027B2910B19700D8E411 /* AppDelegate.swift */; };
@@ -28,6 +29,8 @@
 		A894058429157B3B0071DC20 /* IssuesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894058329157B3B0071DC20 /* IssuesInteractorTests.swift */; };
 		A89501502914A9460077C65B /* IssuesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895014F2914A9460077C65B /* IssuesInteractor.swift */; };
 		A8B8065B2912CDB30025B786 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B8065A2912CDB30025B786 /* TagView.swift */; };
+		A8E9BBFF2916B498007C173F /* IssuesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9BBFE2916B498007C173F /* IssuesPresenterTests.swift */; };
+		A8E9BC012916B550007C173F /* IssueListDisplayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9BC002916B550007C173F /* IssueListDisplayMock.swift */; };
 		FB8B50BB319AF715B977F3EA /* libPods-issueViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EAE4104CEBECCB0C4520A93 /* libPods-issueViewer.a */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +50,7 @@
 		5EAE4104CEBECCB0C4520A93 /* libPods-issueViewer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-issueViewer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6F0BA922B769ACFC22991B /* Pods-issueViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-issueViewerTests.release.xcconfig"; path = "Target Support Files/Pods-issueViewerTests/Pods-issueViewerTests.release.xcconfig"; sourceTree = "<group>"; };
 		A833E2502915960800D545AA /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		A833E2522915A6B700D545AA /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		A8742AE829133D0300A7B8EB /* URLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionService.swift; sourceTree = "<group>"; };
 		A8742AEA29133D7E00A7B8EB /* IssuesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesPresenter.swift; sourceTree = "<group>"; };
 		A88202782910B19700D8E411 /* issueViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = issueViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +75,8 @@
 		A8B8065A2912CDB30025B786 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		A8DCA2B229158884004E6EDF /* libSnapKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSnapKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DCA2B6291588DE004E6EDF /* libSnapKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSnapKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8E9BBFE2916B498007C173F /* IssuesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IssuesPresenterTests.swift; path = IssueViewerTests/IssuesPresenterTests.swift; sourceTree = SOURCE_ROOT; };
+		A8E9BC002916B550007C173F /* IssueListDisplayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IssueListDisplayMock.swift; path = IssueViewerTests/Mocks/IssueListDisplayMock.swift; sourceTree = SOURCE_ROOT; };
 		D87AF3857BCADE291FCB6A99 /* Pods-issueViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-issueViewer.release.xcconfig"; path = "Target Support Files/Pods-issueViewer/Pods-issueViewer.release.xcconfig"; sourceTree = "<group>"; };
 		E16DCFAE8892229098B7FFA0 /* Pods-issueViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-issueViewerTests.debug.xcconfig"; path = "Target Support Files/Pods-issueViewerTests/Pods-issueViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +138,7 @@
 				A88202902910B61B00D8E411 /* Application */,
 				A8B806592912CD910025B786 /* ReusableViews */,
 				A882028F2910B60700D8E411 /* Issues */,
+				A833E2522915A6B700D545AA /* UIColor+Extensions.swift */,
 			);
 			path = issueViewer;
 			sourceTree = "<group>";
@@ -166,6 +173,7 @@
 				A894057E291579240071DC20 /* Mocks */,
 				A8940577291579160071DC20 /* issueViewerTests.swift */,
 				A894058329157B3B0071DC20 /* IssuesInteractorTests.swift */,
+				A8E9BBFE2916B498007C173F /* IssuesPresenterTests.swift */,
 			);
 			path = issueViewerTests;
 			sourceTree = "<group>";
@@ -175,6 +183,7 @@
 			children = (
 				A894057F291579340071DC20 /* URLSessionServiceMock.swift */,
 				A894058129157AD50071DC20 /* IssuesPresenterMock.swift */,
+				A8E9BC002916B550007C173F /* IssueListDisplayMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -386,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A89501502914A9460077C65B /* IssuesInteractor.swift in Sources */,
+				A833E2532915A6B700D545AA /* UIColor+Extensions.swift in Sources */,
 				A833E2512915960800D545AA /* URL+Extensions.swift in Sources */,
 				A8742AEB29133D7E00A7B8EB /* IssuesPresenter.swift in Sources */,
 				A88202982910BA8A00D8E411 /* IssueCell.swift in Sources */,
@@ -406,7 +416,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8E9BC012916B550007C173F /* IssueListDisplayMock.swift in Sources */,
 				A894058429157B3B0071DC20 /* IssuesInteractorTests.swift in Sources */,
+				A8E9BBFF2916B498007C173F /* IssuesPresenterTests.swift in Sources */,
 				A8940580291579340071DC20 /* URLSessionServiceMock.swift in Sources */,
 				A8940578291579160071DC20 /* issueViewerTests.swift in Sources */,
 				A894058229157AD50071DC20 /* IssuesPresenterMock.swift in Sources */,

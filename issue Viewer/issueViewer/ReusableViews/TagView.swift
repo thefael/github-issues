@@ -15,15 +15,21 @@ final class TagView: UIView {
     @available(*, unavailable)
     required init?(coder: NSCoder) { nil }
     
-    func setText(text: String, font: UIFont, color: UIColor) {
+    func setText(text: String, font: UIFont) {
         label.text = text
         label.font = font
-        label.textColor = color
     }
     
-    func setBackgroundColor(_ color: UIColor) {
-        backgroundColor = color
+    func setColors(colors: Colors) {
+        backgroundColor = colors.background
+        label.textColor = colors.title
+        setupBorder(withColor: colors.border.cgColor)
+    }
+    
+    private func setupBorder(withColor color: CGColor) {
+        layer.borderWidth = 2
         layer.cornerRadius = 12
+        layer.borderColor = color
     }
     
     private func setupConstraints() {
@@ -43,4 +49,24 @@ final class TagView: UIView {
         static var trailingPadding: CGFloat = -10
         static var bottomPadding: CGFloat = -5
     } 
+}
+
+extension TagView {
+    struct Colors: Equatable {
+        let background: UIColor
+        let title: UIColor
+        let border: UIColor
+        
+        static let openColors = TagView.Colors(
+            background: .backgroundColor, 
+            title: .openColor, 
+            border: .openColor
+        )
+        
+        static let closedColors = TagView.Colors(
+            background: .backgroundColor,
+            title: .closedColor,
+            border: .closedColor
+        )
+    }
 }

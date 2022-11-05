@@ -14,11 +14,8 @@ extension IssuesPresenter: IssuesPresenting {
         let viewModels = items.map { 
             IssueViewModel(
                 title: $0.title, 
-                state: .init(
-                    text: $0.state.rawValue, 
-                    textColor: .white, 
-                    backgoundColor: .darkGray
-                )
+                state: $0.state.rawValue,
+                colors: $0.state == .open ? .openColors : .closedColors
             ) 
         }
         display?.display(items: viewModels)
