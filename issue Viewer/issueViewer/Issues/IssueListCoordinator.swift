@@ -12,7 +12,7 @@ final class IssueListCoordinator: IssueListCoordinating {
     }
     
     func openIssueDetail() {
-        let issueDetailViewController = IssueDetailViewController()
+        let issueDetailViewController = IssueDetailFactory.make()
         navigationController?.pushViewController(issueDetailViewController, animated: true)
     }
 }
