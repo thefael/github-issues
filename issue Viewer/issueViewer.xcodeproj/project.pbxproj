@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		21ECB79AF5CF3B35F749D530 /* libPods-issueViewerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0771E603E20004AA51B882 /* libPods-issueViewerTests.a */; };
+		A8073BA12916D18E006A3FC2 /* IssueDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8073BA02916D18E006A3FC2 /* IssueDetailInteractor.swift */; };
+		A8073BA42916D224006A3FC2 /* IssueDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8073BA32916D224006A3FC2 /* IssueDetailPresenter.swift */; };
 		A833E2512915960800D545AA /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833E2502915960800D545AA /* URL+Extensions.swift */; };
 		A833E2532915A6B700D545AA /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833E2522915A6B700D545AA /* UIColor+Extensions.swift */; };
 		A8742AE929133D0300A7B8EB /* URLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8742AE829133D0300A7B8EB /* URLSessionService.swift */; };
@@ -53,6 +55,8 @@
 		4F0771E603E20004AA51B882 /* libPods-issueViewerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-issueViewerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EAE4104CEBECCB0C4520A93 /* libPods-issueViewer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-issueViewer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6F0BA922B769ACFC22991B /* Pods-issueViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-issueViewerTests.release.xcconfig"; path = "Target Support Files/Pods-issueViewerTests/Pods-issueViewerTests.release.xcconfig"; sourceTree = "<group>"; };
+		A8073BA02916D18E006A3FC2 /* IssueDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailInteractor.swift; sourceTree = "<group>"; };
+		A8073BA32916D224006A3FC2 /* IssueDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailPresenter.swift; sourceTree = "<group>"; };
 		A833E2502915960800D545AA /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		A833E2522915A6B700D545AA /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		A8742AE829133D0300A7B8EB /* URLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionService.swift; sourceTree = "<group>"; };
@@ -118,6 +122,22 @@
 				4F0771E603E20004AA51B882 /* libPods-issueViewerTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8073B9F2916D175006A3FC2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A8073BA02916D18E006A3FC2 /* IssueDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		A8073BA22916D216006A3FC2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A8073BA32916D224006A3FC2 /* IssueDetailPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		A882026F2910B19700D8E411 = {
@@ -247,8 +267,10 @@
 		A8E9BC022916B966007C173F /* IssueDetail */ = {
 			isa = PBXGroup;
 			children = (
-				A8E9BC092916C855007C173F /* View */,
 				A8E9BC052916B9AE007C173F /* IssueDetailFactory.swift */,
+				A8073BA22916D216006A3FC2 /* Presenter */,
+				A8073B9F2916D175006A3FC2 /* Interactor */,
+				A8E9BC092916C855007C173F /* View */,
 			);
 			path = IssueDetail;
 			sourceTree = "<group>";
@@ -431,6 +453,8 @@
 				A8E9BC042916B982007C173F /* IssueDetailViewController.swift in Sources */,
 				A8E9BC0B2916C877007C173F /* IssueDetailView.swift in Sources */,
 				A88202962910B79900D8E411 /* TableViewDataSource.swift in Sources */,
+				A8073BA12916D18E006A3FC2 /* IssueDetailInteractor.swift in Sources */,
+				A8073BA42916D224006A3FC2 /* IssueDetailPresenter.swift in Sources */,
 				A894056E2915740A0071DC20 /* IssueViewModel.swift in Sources */,
 				A882029A2910BABB00D8E411 /* IssueItem.swift in Sources */,
 				A8742AE929133D0300A7B8EB /* URLSessionService.swift in Sources */,

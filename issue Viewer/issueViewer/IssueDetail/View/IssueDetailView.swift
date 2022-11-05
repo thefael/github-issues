@@ -50,6 +50,13 @@ final class IssueDetailView: UIView {
     @available(*, unavailable)
     required init?(coder: NSCoder) { nil }
     
+    func setupDetails(with viewModel: IssueDetailViewModel) {
+        titleLabel.text = viewModel.issue.title
+        descriptionLabel.text = viewModel.issue.description
+        userName.text = viewModel.user.name
+        userImage.image = viewModel.user.image
+    }
+    
     private func setupConstraints() {
         setupStackConstraints()
         setupTitleConstraints()
