@@ -10,6 +10,7 @@ final class IssueListViewController: UIViewController {
     lazy var issueListView: IssueListView = {
         let view = IssueListView()
         view.tableView.dataSource = dataSource
+        view.tableView.delegate = self
         return view
     }()
     
@@ -40,5 +41,11 @@ extension IssueListViewController: IssueListDisplaying {
         DispatchQueue.main.async {
             self.issueListView.tableView.reloadData()
         }
+    }
+}
+
+extension IssueListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        interactor.didTapCell(atPosition: indexPath.row)
     }
 }

@@ -31,6 +31,10 @@
 		A8B8065B2912CDB30025B786 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B8065A2912CDB30025B786 /* TagView.swift */; };
 		A8E9BBFF2916B498007C173F /* IssuesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9BBFE2916B498007C173F /* IssuesPresenterTests.swift */; };
 		A8E9BC012916B550007C173F /* IssueListDisplayMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9BC002916B550007C173F /* IssueListDisplayMock.swift */; };
+		A8E9BC042916B982007C173F /* IssueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9BC032916B982007C173F /* IssueDetailViewController.swift */; };
+		A8E9BC062916B9AE007C173F /* IssueDetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9BC052916B9AE007C173F /* IssueDetailFactory.swift */; };
+		A8E9BC082916BCAC007C173F /* IssueListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9BC072916BCAC007C173F /* IssueListCoordinator.swift */; };
+		A8E9BC0B2916C877007C173F /* IssueDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9BC0A2916C877007C173F /* IssueDetailView.swift */; };
 		FB8B50BB319AF715B977F3EA /* libPods-issueViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EAE4104CEBECCB0C4520A93 /* libPods-issueViewer.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +81,10 @@
 		A8DCA2B6291588DE004E6EDF /* libSnapKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSnapKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8E9BBFE2916B498007C173F /* IssuesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IssuesPresenterTests.swift; path = IssueViewerTests/IssuesPresenterTests.swift; sourceTree = SOURCE_ROOT; };
 		A8E9BC002916B550007C173F /* IssueListDisplayMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IssueListDisplayMock.swift; path = IssueViewerTests/Mocks/IssueListDisplayMock.swift; sourceTree = SOURCE_ROOT; };
+		A8E9BC032916B982007C173F /* IssueDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailViewController.swift; sourceTree = "<group>"; };
+		A8E9BC052916B9AE007C173F /* IssueDetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailFactory.swift; sourceTree = "<group>"; };
+		A8E9BC072916BCAC007C173F /* IssueListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListCoordinator.swift; sourceTree = "<group>"; };
+		A8E9BC0A2916C877007C173F /* IssueDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailView.swift; sourceTree = "<group>"; };
 		D87AF3857BCADE291FCB6A99 /* Pods-issueViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-issueViewer.release.xcconfig"; path = "Target Support Files/Pods-issueViewer/Pods-issueViewer.release.xcconfig"; sourceTree = "<group>"; };
 		E16DCFAE8892229098B7FFA0 /* Pods-issueViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-issueViewerTests.debug.xcconfig"; path = "Target Support Files/Pods-issueViewerTests/Pods-issueViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,8 +143,9 @@
 		A882027A2910B19700D8E411 /* issueViewer */ = {
 			isa = PBXGroup;
 			children = (
-				A88202902910B61B00D8E411 /* Application */,
 				A8B806592912CD910025B786 /* ReusableViews */,
+				A88202902910B61B00D8E411 /* Application */,
+				A8E9BC022916B966007C173F /* IssueDetail */,
 				A882028F2910B60700D8E411 /* Issues */,
 				A833E2522915A6B700D545AA /* UIColor+Extensions.swift */,
 			);
@@ -146,11 +155,12 @@
 		A882028F2910B60700D8E411 /* Issues */ = {
 			isa = PBXGroup;
 			children = (
+				A88202912910B6FF00D8E411 /* IssueListFactory.swift */,
 				A895014E291461D60077C65B /* Interactor */,
 				A895014D291461CB0077C65B /* Presenter */,
 				A895014C291461BE0077C65B /* Networking */,
 				A8B806572912CCD60025B786 /* View */,
-				A88202912910B6FF00D8E411 /* IssueListFactory.swift */,
+				A8E9BC072916BCAC007C173F /* IssueListCoordinator.swift */,
 			);
 			path = Issues;
 			sourceTree = "<group>";
@@ -232,6 +242,24 @@
 				A8B8065A2912CDB30025B786 /* TagView.swift */,
 			);
 			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		A8E9BC022916B966007C173F /* IssueDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A8E9BC092916C855007C173F /* View */,
+				A8E9BC052916B9AE007C173F /* IssueDetailFactory.swift */,
+			);
+			path = IssueDetail;
+			sourceTree = "<group>";
+		};
+		A8E9BC092916C855007C173F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A8E9BC032916B982007C173F /* IssueDetailViewController.swift */,
+				A8E9BC0A2916C877007C173F /* IssueDetailView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E79BAFAE60ABF127786A1EA0 /* Pods */ = {
@@ -394,16 +422,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8E9BC062916B9AE007C173F /* IssueDetailFactory.swift in Sources */,
 				A89501502914A9460077C65B /* IssuesInteractor.swift in Sources */,
 				A833E2532915A6B700D545AA /* UIColor+Extensions.swift in Sources */,
 				A833E2512915960800D545AA /* URL+Extensions.swift in Sources */,
 				A8742AEB29133D7E00A7B8EB /* IssuesPresenter.swift in Sources */,
 				A88202982910BA8A00D8E411 /* IssueCell.swift in Sources */,
+				A8E9BC042916B982007C173F /* IssueDetailViewController.swift in Sources */,
+				A8E9BC0B2916C877007C173F /* IssueDetailView.swift in Sources */,
 				A88202962910B79900D8E411 /* TableViewDataSource.swift in Sources */,
 				A894056E2915740A0071DC20 /* IssueViewModel.swift in Sources */,
 				A882029A2910BABB00D8E411 /* IssueItem.swift in Sources */,
 				A8742AE929133D0300A7B8EB /* URLSessionService.swift in Sources */,
 				A88202942910B75D00D8E411 /* IssueListView.swift in Sources */,
+				A8E9BC082916BCAC007C173F /* IssueListCoordinator.swift in Sources */,
 				A88202802910B19700D8E411 /* IssueViewController.swift in Sources */,
 				A882027C2910B19700D8E411 /* AppDelegate.swift in Sources */,
 				A88202922910B6FF00D8E411 /* IssueListFactory.swift in Sources */,

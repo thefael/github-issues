@@ -3,10 +3,16 @@ import UIKit
 
 protocol IssuesPresenting {
     func present(items: [IssueItem])
+    func presentIssueDetail(forItem item: IssueItem)
 }
 
 final class IssuesPresenter { 
+    private let coordinator: IssueListCoordinating
     weak var display: IssueListDisplaying?
+    
+    init(coordinator: IssueListCoordinating) {
+        self.coordinator = coordinator
+    }
 }
 
 extension IssuesPresenter: IssuesPresenting {
@@ -19,5 +25,9 @@ extension IssuesPresenter: IssuesPresenting {
             ) 
         }
         display?.display(items: viewModels)
+    }
+    
+    func presentIssueDetail(forItem item: IssueItem) {
+        coordinator.openIssueDetail(withItem: item)
     }
 }
