@@ -57,7 +57,7 @@ final class IssueDetailView: UIView {
         titleLabel.text = viewModel.issue.title
         descriptionLabel.text = viewModel.issue.description
         userName.text = viewModel.user.name
-        userImage.image = viewModel.user.image
+        loadUserImage(path: viewModel.user.imagePath)
     }
     
     private func setupConstraints() {
@@ -103,6 +103,20 @@ final class IssueDetailView: UIView {
             $0.top.equalTo(separatorView.snp.bottom).offset(Layout.topSpaciong)
             $0.leading.equalToSuperview().offset(Layout.leftSpacing)
             $0.trailing.equalToSuperview().offset(Layout.rightSpacing)
+        }
+    }
+    
+    private func loadUserImage(path: String) {
+        DispatchQueue.global().async {
+            guard let url = URL(string: path), let data = try? Data(contentsOf: url) else { 
+                DispatchQueue.main.async {
+                    self.userImage.image = UIImage(named: "star.fill") ?? .init()
+                }
+                return 
+            }
+            DispatchQueue.main.async {
+                self.userImage.image = UIImage(data: data) 
+            }
         }
     }
     
