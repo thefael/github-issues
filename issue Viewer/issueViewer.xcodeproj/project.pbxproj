@@ -200,12 +200,12 @@
 				A8073BA829180789006A3FC2 /* Common */,
 				A88202902910B61B00D8E411 /* Application */,
 				A8E9BC022916B966007C173F /* IssueDetail */,
-				A882028F2910B60700D8E411 /* Issues */,
+				A882028F2910B60700D8E411 /* IssueList */,
 			);
 			path = issueViewer;
 			sourceTree = "<group>";
 		};
-		A882028F2910B60700D8E411 /* Issues */ = {
+		A882028F2910B60700D8E411 /* IssueList */ = {
 			isa = PBXGroup;
 			children = (
 				A88202912910B6FF00D8E411 /* IssueListFactory.swift */,
@@ -215,7 +215,7 @@
 				A895014C291461BE0077C65B /* Networking */,
 				A8B806572912CCD60025B786 /* View */,
 			);
-			path = Issues;
+			path = IssueList;
 			sourceTree = "<group>";
 		};
 		A88202902910B61B00D8E411 /* Application */ = {
