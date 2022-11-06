@@ -3,20 +3,13 @@ import SnapKit
 
 final class IssueDetailView: UIView {
     private let userImage: UIImageView = {
-        let imageView = UIImageView()
-        imageView.layer.borderWidth = 1.0
-        imageView.layer.masksToBounds = false
-        imageView.layer.borderColor = UIColor.white.cgColor
-        let image = UIImage(systemName: "star.fill")
-        imageView.image = image
-        imageView.layer.cornerRadius = imageView.frame.size.width / 2
-        imageView.clipsToBounds = true
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        imageView.rounded()
         return imageView
     }()
     
     private let userName: UILabel = {
         let label = UILabel()
-        label.text = "username"
         return label
     }()
     
@@ -31,13 +24,13 @@ final class IssueDetailView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "teste"
+        label.numberOfLines = 0
         return label
     }()
     
     private let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "teste descrição"
+        label.numberOfLines = 0
         return label
     }()
     
@@ -69,6 +62,9 @@ final class IssueDetailView: UIView {
             $0.top.equalTo(safeAreaLayoutGuide.snp.top).offset(8)
             $0.leading.equalToSuperview().offset(16)
         }
+        userImage.snp.makeConstraints { 
+            $0.size.equalTo(CGSize(width: 50, height: 50))
+        }
     }
     
     private func setupTitleConstraints() {
@@ -88,4 +84,13 @@ final class IssueDetailView: UIView {
             $0.trailing.equalToSuperview().offset(-16)
         }
     }
+}
+
+extension UIImageView {
+   func rounded() {
+       let radius = self.frame.width / 2
+       self.layer.cornerRadius = radius
+       self.layer.masksToBounds = false
+       self.clipsToBounds = true
+   }
 }
