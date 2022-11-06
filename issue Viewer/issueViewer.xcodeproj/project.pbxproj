@@ -140,6 +140,14 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		A8073BA72917FADC006A3FC2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A8E9BC072916BCAC007C173F /* IssueListCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		A882026F2910B19700D8E411 = {
 			isa = PBXGroup;
 			children = (
@@ -176,11 +184,11 @@
 			isa = PBXGroup;
 			children = (
 				A88202912910B6FF00D8E411 /* IssueListFactory.swift */,
+				A8073BA72917FADC006A3FC2 /* Coordinator */,
 				A895014E291461D60077C65B /* Interactor */,
 				A895014D291461CB0077C65B /* Presenter */,
 				A895014C291461BE0077C65B /* Networking */,
 				A8B806572912CCD60025B786 /* View */,
-				A8E9BC072916BCAC007C173F /* IssueListCoordinator.swift */,
 			);
 			path = Issues;
 			sourceTree = "<group>";
