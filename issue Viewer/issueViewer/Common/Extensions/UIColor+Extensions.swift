@@ -1,9 +1,12 @@
 import UIKit
 
 extension UIColor {
-    static var openColor: UIColor = .hexToUIColor(hex: "3fba4f")
-    static var closedColor: UIColor = .hexToUIColor(hex: "a371f7")
-    static var backgroundColor: UIColor = .hexToUIColor(hex: "0c1117")
+    static let openColor: UIColor = .hexToUIColor(hex: "3fba4f")
+    static let closedColor: UIColor = .hexToUIColor(hex: "a371f7")
+    static let backgroundColor: UIColor = .hexToUIColor(hex: "0c1117")
+    static let textColor: UIColor = .hexToUIColor(hex: "c7d2d9")
+    static let separatorColor: UIColor = .hexToUIColor(hex: "515151")
+    static let selectedColor: UIColor = .hexToUIColor(hex: "343434")
     static func hexToUIColor(hex: String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         

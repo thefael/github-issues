@@ -29,6 +29,7 @@ final class IssueListViewController: UIViewController {
     init(interactor: IssuesInteracting) {
         self.interactor = interactor
         super.init(nibName: nil, bundle: nil)
+        title = "Issue List"
     }
 
     @available(*, unavailable)

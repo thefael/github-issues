@@ -2,11 +2,10 @@ import UIKit
 import SnapKit
 
 final class IssueCell: UITableViewCell {
-    fileprivate enum Layout { }
     private var descriptionLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.textColor = .hexToUIColor(hex: "c7d2d9")
+        label.textColor = .textColor
         return label
     }()
     
@@ -25,8 +24,12 @@ final class IssueCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        addCustomDisclosureIndicator(with: .textColor)
         setupConstraints()
-        backgroundColor = .hexToUIColor(hex: "161b22")
+        backgroundColor = .backgroundColor
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = .selectedColor
+        selectedBackgroundView = backgroundView
     }
     
     @available(*, unavailable)
@@ -46,16 +49,12 @@ final class IssueCell: UITableViewCell {
         stackView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(Layout.stackPadding.top)
             $0.leading.equalToSuperview().offset(Layout.stackPadding.leading)
-            $0.trailing.equalToSuperview().offset(Layout.stackPadding.leading)
+            $0.trailing.equalToSuperview().offset(Layout.stackPadding.trailing)
             $0.bottom.equalToSuperview().offset(Layout.stackPadding.bottom)
         }
     }
-}
-
-extension IssueCell.Layout {
-    static var stackPadding: (top: CGFloat, leading: CGFloat, trailing: CGFloat, bottom: CGFloat) = (15, 20, 0, -10)
-}
-
-extension UITableViewCell {
-    static var identifier: String = String(describing: UITableViewCell.self)
+    
+    private enum Layout {
+        static var stackPadding: (top: CGFloat, leading: CGFloat, trailing: CGFloat, bottom: CGFloat) = (15, 20, -10, -10)
+    }
 }
