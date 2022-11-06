@@ -104,7 +104,7 @@ final class IssueDetailView: UIView {
     private func setupStackConstraints() {
         contentView.addSubview(userStack)
         userStack.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide.snp.top).offset(Layout.topSpacing)
+            $0.top.equalTo(contentView).offset(Layout.topSpacing)
             $0.leading.equalToSuperview().offset(Layout.leftSpacing)
         }
         userImage.snp.makeConstraints { 
@@ -144,7 +144,7 @@ final class IssueDetailView: UIView {
         issueLinkButton.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(descriptionLabel.snp.bottom).offset(Layout.topSpacing)
-            $0.bottom.equalToSuperview()
+            $0.bottom.equalToSuperview().offset(Layout.bottomSpacing)
         }
     }
     
@@ -172,6 +172,7 @@ final class IssueDetailView: UIView {
         static let leftSpacing: CGFloat = 16
         static let rightSpacing: CGFloat = -16
         static let topSpacing: CGFloat = 8
+        static let bottomSpacing: CGFloat = -32
         static let userImageSize: CGSize = .init(width: 50, height: 50)
         static let stackSpacing: CGFloat = 10
     }
