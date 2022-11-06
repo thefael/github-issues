@@ -19,6 +19,7 @@ final class IssueDetailViewController: UIViewController {
     
     override func loadView() {
         view = issueDetailView
+        issueDetailView.delegate = self
     }
     
     override func viewDidLoad() {
@@ -31,5 +32,11 @@ final class IssueDetailViewController: UIViewController {
 extension IssueDetailViewController: IssueDetailDisplaying {
     func display(item: IssueDetailViewModel) {
         issueDetailView.setupDetails(with: item)
+    }
+}
+
+extension IssueDetailViewController: IssueDetailViewDelegate {
+    func didTapIssueLink() {
+        interactor.didTapIssueLink()
     }
 }

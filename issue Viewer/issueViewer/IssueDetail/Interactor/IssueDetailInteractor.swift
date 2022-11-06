@@ -2,6 +2,7 @@ import Foundation
 
 protocol IssueDetailInteracting {
     func loadData()
+    func didTapIssueLink()
 }
 
 final class IssueDetailInteractor {
@@ -17,5 +18,9 @@ final class IssueDetailInteractor {
 extension IssueDetailInteractor: IssueDetailInteracting {
     func loadData() {
         presenter.present(item: item)
+    }
+    
+    func didTapIssueLink() {
+        presenter.presentIssueLink(path: item.htmlURL)
     }
 }

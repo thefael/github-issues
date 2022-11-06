@@ -2,10 +2,16 @@ import UIKit
 
 protocol IssueDetailPresenting {
     func present(item: IssueItem)
+    func presentIssueLink(path: String)
 }
 
 final class IssueDetailPresenter {
+    private let coordinator: IssueDetailCoordinating
     weak var display: IssueDetailDisplaying?
+    
+    init(coordinator: IssueDetailCoordinating) {
+        self.coordinator = coordinator
+    }
 }
 
 extension IssueDetailPresenter: IssueDetailPresenting {
@@ -21,6 +27,10 @@ extension IssueDetailPresenter: IssueDetailPresenting {
             )
         )
         display?.display(item: viewModel)
+    }
+    
+    func presentIssueLink(path: String) {
+        coordinator.open(link: path)
     }
 }
 
