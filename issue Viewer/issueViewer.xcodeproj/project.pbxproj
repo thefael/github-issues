@@ -13,6 +13,7 @@
 		A8073BA62917F9EC006A3FC2 /* IssueListCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8073BA52917F9EC006A3FC2 /* IssueListCoordinatorMock.swift */; };
 		A8073BAA291807A1006A3FC2 /* UItableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8073BA9291807A1006A3FC2 /* UItableViewCell+Extensions.swift */; };
 		A8073BAC2918081B006A3FC2 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8073BAB2918081B006A3FC2 /* UIImageView+Extensions.swift */; };
+		A814B50A2918428A007543EC /* IssueDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A814B5092918428A007543EC /* IssueDetailCoordinator.swift */; };
 		A833E2512915960800D545AA /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833E2502915960800D545AA /* URL+Extensions.swift */; };
 		A833E2532915A6B700D545AA /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833E2522915A6B700D545AA /* UIColor+Extensions.swift */; };
 		A8742AE929133D0300A7B8EB /* URLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8742AE829133D0300A7B8EB /* URLSessionService.swift */; };
@@ -62,6 +63,7 @@
 		A8073BA52917F9EC006A3FC2 /* IssueListCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IssueListCoordinatorMock.swift; path = IssueViewerTests/Mocks/IssueListCoordinatorMock.swift; sourceTree = SOURCE_ROOT; };
 		A8073BA9291807A1006A3FC2 /* UItableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UItableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		A8073BAB2918081B006A3FC2 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		A814B5092918428A007543EC /* IssueDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailCoordinator.swift; sourceTree = "<group>"; };
 		A833E2502915960800D545AA /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		A833E2522915A6B700D545AA /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		A8742AE829133D0300A7B8EB /* URLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionService.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				A8073BA22916D216006A3FC2 /* Presenter */,
 				A8073B9F2916D175006A3FC2 /* Interactor */,
 				A8E9BC092916C855007C173F /* View */,
+				A814B5092918428A007543EC /* IssueDetailCoordinator.swift */,
 			);
 			path = IssueDetail;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				A8742AEB29133D7E00A7B8EB /* IssuesPresenter.swift in Sources */,
 				A88202982910BA8A00D8E411 /* IssueCell.swift in Sources */,
 				A8E9BC042916B982007C173F /* IssueDetailViewController.swift in Sources */,
+				A814B50A2918428A007543EC /* IssueDetailCoordinator.swift in Sources */,
 				A8E9BC0B2916C877007C173F /* IssueDetailView.swift in Sources */,
 				A8073BAC2918081B006A3FC2 /* UIImageView+Extensions.swift in Sources */,
 				A88202962910B79900D8E411 /* TableViewDataSource.swift in Sources */,
