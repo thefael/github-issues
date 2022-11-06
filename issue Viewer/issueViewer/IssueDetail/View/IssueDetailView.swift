@@ -70,19 +70,18 @@ final class IssueDetailView: UIView {
     private func setupStackConstraints() {
         addSubview(userStack)
         userStack.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide.snp.top).offset(Layout.topSpaciong)
+            $0.top.equalTo(safeAreaLayoutGuide.snp.top).offset(Layout.topSpacing)
             $0.leading.equalToSuperview().offset(Layout.leftSpacing)
         }
         userImage.snp.makeConstraints { 
             $0.size.equalTo(Layout.userImageSize)
         }
-        
     }
     
     private func setupTitleConstraints() {
         addSubview(titleLabel)
         titleLabel.snp.makeConstraints {
-            $0.top.equalTo(userStack.snp.bottom).offset(Layout.topSpaciong)
+            $0.top.equalTo(userStack.snp.bottom).offset(Layout.topSpacing)
             $0.leading.equalToSuperview().offset(Layout.leftSpacing)
             $0.trailing.equalToSuperview().offset(Layout.rightSpacing)
         }
@@ -91,7 +90,7 @@ final class IssueDetailView: UIView {
     private func setupSeparatorView() {
         addSubview(separatorView)
         separatorView.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(Layout.topSpaciong)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(Layout.topSpacing)
             $0.centerX.equalToSuperview()
             $0.size.equalTo(Layout.separatorViewSize)
         }
@@ -100,7 +99,7 @@ final class IssueDetailView: UIView {
     private func setupDescriptionConstraints() {
         addSubview(descriptionLabel)
         descriptionLabel.snp.makeConstraints {
-            $0.top.equalTo(separatorView.snp.bottom).offset(Layout.topSpaciong)
+            $0.top.equalTo(separatorView.snp.bottom).offset(Layout.topSpacing)
             $0.leading.equalToSuperview().offset(Layout.leftSpacing)
             $0.trailing.equalToSuperview().offset(Layout.rightSpacing)
         }
@@ -124,7 +123,7 @@ final class IssueDetailView: UIView {
         static let separatorViewSize = CGSize(width: UIScreen.main.bounds.width - 32, height: 1)
         static let leftSpacing: CGFloat = 16
         static let rightSpacing: CGFloat = -16
-        static let topSpaciong: CGFloat = 8
+        static let topSpacing: CGFloat = 8
         static let userImageSize: CGSize = .init(width: 50, height: 50)
         static let stackSpacing: CGFloat = 10
     }
