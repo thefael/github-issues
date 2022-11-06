@@ -5,6 +5,8 @@ final class IssueListView: UIView {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(IssueCell.self, forCellReuseIdentifier: IssueCell.identifier)
+        tableView.separatorColor = .separatorColor
+
         return tableView
     }()
     

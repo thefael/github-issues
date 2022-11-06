@@ -11,6 +11,8 @@
 		A8073BA12916D18E006A3FC2 /* IssueDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8073BA02916D18E006A3FC2 /* IssueDetailInteractor.swift */; };
 		A8073BA42916D224006A3FC2 /* IssueDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8073BA32916D224006A3FC2 /* IssueDetailPresenter.swift */; };
 		A8073BA62917F9EC006A3FC2 /* IssueListCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8073BA52917F9EC006A3FC2 /* IssueListCoordinatorMock.swift */; };
+		A8073BAA291807A1006A3FC2 /* UItableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8073BA9291807A1006A3FC2 /* UItableViewCell+Extensions.swift */; };
+		A8073BAC2918081B006A3FC2 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8073BAB2918081B006A3FC2 /* UIImageView+Extensions.swift */; };
 		A833E2512915960800D545AA /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833E2502915960800D545AA /* URL+Extensions.swift */; };
 		A833E2532915A6B700D545AA /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833E2522915A6B700D545AA /* UIColor+Extensions.swift */; };
 		A8742AE929133D0300A7B8EB /* URLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8742AE829133D0300A7B8EB /* URLSessionService.swift */; };
@@ -58,6 +60,8 @@
 		A8073BA02916D18E006A3FC2 /* IssueDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailInteractor.swift; sourceTree = "<group>"; };
 		A8073BA32916D224006A3FC2 /* IssueDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailPresenter.swift; sourceTree = "<group>"; };
 		A8073BA52917F9EC006A3FC2 /* IssueListCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IssueListCoordinatorMock.swift; path = IssueViewerTests/Mocks/IssueListCoordinatorMock.swift; sourceTree = SOURCE_ROOT; };
+		A8073BA9291807A1006A3FC2 /* UItableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UItableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		A8073BAB2918081B006A3FC2 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		A833E2502915960800D545AA /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		A833E2522915A6B700D545AA /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		A8742AE829133D0300A7B8EB /* URLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionService.swift; sourceTree = "<group>"; };
@@ -148,6 +152,26 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		A8073BA829180789006A3FC2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A8073BAD2918084A006A3FC2 /* Extensions */,
+				A8B806592912CD910025B786 /* ReusableViews */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A8073BAD2918084A006A3FC2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A833E2522915A6B700D545AA /* UIColor+Extensions.swift */,
+				A8073BAB2918081B006A3FC2 /* UIImageView+Extensions.swift */,
+				A8073BA9291807A1006A3FC2 /* UItableViewCell+Extensions.swift */,
+				A833E2502915960800D545AA /* URL+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A882026F2910B19700D8E411 = {
 			isa = PBXGroup;
 			children = (
@@ -171,11 +195,10 @@
 		A882027A2910B19700D8E411 /* issueViewer */ = {
 			isa = PBXGroup;
 			children = (
-				A8B806592912CD910025B786 /* ReusableViews */,
+				A8073BA829180789006A3FC2 /* Common */,
 				A88202902910B61B00D8E411 /* Application */,
 				A8E9BC022916B966007C173F /* IssueDetail */,
 				A882028F2910B60700D8E411 /* Issues */,
-				A833E2522915A6B700D545AA /* UIColor+Extensions.swift */,
 			);
 			path = issueViewer;
 			sourceTree = "<group>";
@@ -248,7 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				A895014F2914A9460077C65B /* IssuesInteractor.swift */,
-				A833E2502915960800D545AA /* URL+Extensions.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -460,12 +482,14 @@
 				A88202982910BA8A00D8E411 /* IssueCell.swift in Sources */,
 				A8E9BC042916B982007C173F /* IssueDetailViewController.swift in Sources */,
 				A8E9BC0B2916C877007C173F /* IssueDetailView.swift in Sources */,
+				A8073BAC2918081B006A3FC2 /* UIImageView+Extensions.swift in Sources */,
 				A88202962910B79900D8E411 /* TableViewDataSource.swift in Sources */,
 				A8073BA12916D18E006A3FC2 /* IssueDetailInteractor.swift in Sources */,
 				A8073BA42916D224006A3FC2 /* IssueDetailPresenter.swift in Sources */,
 				A894056E2915740A0071DC20 /* IssueViewModel.swift in Sources */,
 				A882029A2910BABB00D8E411 /* IssueItem.swift in Sources */,
 				A8742AE929133D0300A7B8EB /* URLSessionService.swift in Sources */,
+				A8073BAA291807A1006A3FC2 /* UItableViewCell+Extensions.swift in Sources */,
 				A88202942910B75D00D8E411 /* IssueListView.swift in Sources */,
 				A8E9BC082916BCAC007C173F /* IssueListCoordinator.swift in Sources */,
 				A88202802910B19700D8E411 /* IssueViewController.swift in Sources */,

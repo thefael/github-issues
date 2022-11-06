@@ -11,6 +11,7 @@ final class IssueDetailViewController: UIViewController {
     init(interactor: IssueDetailInteracting) {
         self.interactor = interactor
         super.init(nibName: nil, bundle: nil)
+        issueDetailView.backgroundColor = .backgroundColor
     }
 
     @available(*, unavailable)
@@ -23,6 +24,7 @@ final class IssueDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         interactor.loadData()
+        navigationItem.largeTitleDisplayMode = .never
     }
 }
 
