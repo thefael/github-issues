@@ -12,7 +12,7 @@ extension IssueDetailPresenter: IssueDetailPresenting {
     func present(item: IssueItem) {
         let viewModel = IssueDetailViewModel(
             user: .init(
-                image: UIImage(contentsOfFile: item.user.avatarURL) ?? .init(),
+                image: getImage(path: item.user.avatarURL),
                 name: item.user.login
             ),
             issue: .init(
@@ -21,6 +21,16 @@ extension IssueDetailPresenter: IssueDetailPresenting {
             )
         )
         display?.display(item: viewModel)
+    }
+    
+    private func getImage(path: String) -> UIImage {
+        guard let url = URL(string: path), 
+              let data = try? Data(contentsOf: url),
+              let image = UIImage(data: data) 
+        else { 
+            return .init(systemName: "star.fill") ?? .init() 
+        }
+        return image
     }
 }
 

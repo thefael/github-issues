@@ -10,6 +10,7 @@
 		21ECB79AF5CF3B35F749D530 /* libPods-issueViewerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0771E603E20004AA51B882 /* libPods-issueViewerTests.a */; };
 		A8073BA12916D18E006A3FC2 /* IssueDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8073BA02916D18E006A3FC2 /* IssueDetailInteractor.swift */; };
 		A8073BA42916D224006A3FC2 /* IssueDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8073BA32916D224006A3FC2 /* IssueDetailPresenter.swift */; };
+		A8073BA62917F9EC006A3FC2 /* IssueListCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8073BA52917F9EC006A3FC2 /* IssueListCoordinatorMock.swift */; };
 		A833E2512915960800D545AA /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833E2502915960800D545AA /* URL+Extensions.swift */; };
 		A833E2532915A6B700D545AA /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833E2522915A6B700D545AA /* UIColor+Extensions.swift */; };
 		A8742AE929133D0300A7B8EB /* URLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8742AE829133D0300A7B8EB /* URLSessionService.swift */; };
@@ -25,7 +26,6 @@
 		A88202982910BA8A00D8E411 /* IssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88202972910BA8A00D8E411 /* IssueCell.swift */; };
 		A882029A2910BABB00D8E411 /* IssueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88202992910BABB00D8E411 /* IssueItem.swift */; };
 		A894056E2915740A0071DC20 /* IssueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894056D2915740A0071DC20 /* IssueViewModel.swift */; };
-		A8940578291579160071DC20 /* issueViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8940577291579160071DC20 /* issueViewerTests.swift */; };
 		A8940580291579340071DC20 /* URLSessionServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894057F291579340071DC20 /* URLSessionServiceMock.swift */; };
 		A894058229157AD50071DC20 /* IssuesPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894058129157AD50071DC20 /* IssuesPresenterMock.swift */; };
 		A894058429157B3B0071DC20 /* IssuesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894058329157B3B0071DC20 /* IssuesInteractorTests.swift */; };
@@ -57,6 +57,7 @@
 		7F6F0BA922B769ACFC22991B /* Pods-issueViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-issueViewerTests.release.xcconfig"; path = "Target Support Files/Pods-issueViewerTests/Pods-issueViewerTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8073BA02916D18E006A3FC2 /* IssueDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailInteractor.swift; sourceTree = "<group>"; };
 		A8073BA32916D224006A3FC2 /* IssueDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailPresenter.swift; sourceTree = "<group>"; };
+		A8073BA52917F9EC006A3FC2 /* IssueListCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IssueListCoordinatorMock.swift; path = IssueViewerTests/Mocks/IssueListCoordinatorMock.swift; sourceTree = SOURCE_ROOT; };
 		A833E2502915960800D545AA /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		A833E2522915A6B700D545AA /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		A8742AE829133D0300A7B8EB /* URLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionService.swift; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		A88202992910BABB00D8E411 /* IssueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueItem.swift; sourceTree = "<group>"; };
 		A894056D2915740A0071DC20 /* IssueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewModel.swift; sourceTree = "<group>"; };
 		A8940575291579160071DC20 /* issueViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = issueViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8940577291579160071DC20 /* issueViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = issueViewerTests.swift; sourceTree = "<group>"; };
 		A894057F291579340071DC20 /* URLSessionServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = URLSessionServiceMock.swift; path = IssueViewerTests/Mocks/URLSessionServiceMock.swift; sourceTree = SOURCE_ROOT; };
 		A894058129157AD50071DC20 /* IssuesPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IssuesPresenterMock.swift; path = IssueViewerTests/Mocks/IssuesPresenterMock.swift; sourceTree = SOURCE_ROOT; };
 		A894058329157B3B0071DC20 /* IssuesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IssuesInteractorTests.swift; path = IssueViewerTests/IssuesInteractorTests.swift; sourceTree = SOURCE_ROOT; };
@@ -201,7 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				A894057E291579240071DC20 /* Mocks */,
-				A8940577291579160071DC20 /* issueViewerTests.swift */,
 				A894058329157B3B0071DC20 /* IssuesInteractorTests.swift */,
 				A8E9BBFE2916B498007C173F /* IssuesPresenterTests.swift */,
 			);
@@ -214,6 +213,7 @@
 				A894057F291579340071DC20 /* URLSessionServiceMock.swift */,
 				A894058129157AD50071DC20 /* IssuesPresenterMock.swift */,
 				A8E9BC002916B550007C173F /* IssueListDisplayMock.swift */,
+				A8073BA52917F9EC006A3FC2 /* IssueListCoordinatorMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -476,7 +476,7 @@
 				A894058429157B3B0071DC20 /* IssuesInteractorTests.swift in Sources */,
 				A8E9BBFF2916B498007C173F /* IssuesPresenterTests.swift in Sources */,
 				A8940580291579340071DC20 /* URLSessionServiceMock.swift in Sources */,
-				A8940578291579160071DC20 /* issueViewerTests.swift in Sources */,
+				A8073BA62917F9EC006A3FC2 /* IssueListCoordinatorMock.swift in Sources */,
 				A894058229157AD50071DC20 /* IssuesPresenterMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
