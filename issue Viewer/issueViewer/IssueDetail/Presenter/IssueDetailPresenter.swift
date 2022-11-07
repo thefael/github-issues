@@ -33,18 +33,3 @@ extension IssueDetailPresenter: IssueDetailPresenting {
         coordinator.open(link: path)
     }
 }
-
-struct IssueDetailViewModel {
-    let user: User
-    let issue: Issue
-    
-    struct User {
-        let imagePath: String
-        let name: String
-    }
-    
-    struct Issue {
-        let title: String
-        let description: String
-    }
-}
