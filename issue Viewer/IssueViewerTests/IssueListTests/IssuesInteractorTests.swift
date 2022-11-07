@@ -18,4 +18,16 @@ final class IssuesInteractorTests: XCTestCase {
         XCTAssertEqual([.fixture()], receivedItems)
     }
     
+    func test_didTapCell_shouldCallPresentIssueDetail_withCorrectValue() {
+        var receivedItem: IssueItem?
+        presenter.presentIssueDetailAction = { item in 
+            receivedItem = item
+        }
+        interactor.items = [.fixture()]
+        
+        interactor.didTapCell(atPosition: 0)
+        
+        XCTAssertEqual(receivedItem, .fixture())
+    }
+    
 }

@@ -8,7 +8,7 @@ protocol IssuesInteracting {
 final class IssuesInteractor {
     private let presenter: IssuesPresenting
     private let service: URLSessionServicing
-    private var items: [IssueItem]?
+    var items: [IssueItem]?
     
     init(presenter: IssuesPresenting, service: URLSessionServicing) {
         self.presenter = presenter
