@@ -2,17 +2,23 @@ import UIKit
 
 protocol IssueDetailPresenting {
     func present(item: IssueItem)
+    func presentIssueLink(path: String)
 }
 
 final class IssueDetailPresenter {
+    private let coordinator: IssueDetailCoordinating
     weak var display: IssueDetailDisplaying?
+    
+    init(coordinator: IssueDetailCoordinating) {
+        self.coordinator = coordinator
+    }
 }
 
 extension IssueDetailPresenter: IssueDetailPresenting {
     func present(item: IssueItem) {
         let viewModel = IssueDetailViewModel(
             user: .init(
-                image: UIImage(contentsOfFile: item.user.avatarURL) ?? .init(),
+                imagePath: item.user.avatarURL,
                 name: item.user.login
             ),
             issue: .init(
@@ -22,19 +28,8 @@ extension IssueDetailPresenter: IssueDetailPresenting {
         )
         display?.display(item: viewModel)
     }
-}
-
-struct IssueDetailViewModel {
-    let user: User
-    let issue: Issue
     
-    struct User {
-        let image: UIImage
-        let name: String
-    }
-    
-    struct Issue {
-        let title: String
-        let description: String
+    func presentIssueLink(path: String) {
+        coordinator.open(link: path)
     }
 }

@@ -2,13 +2,15 @@
 import XCTest
 
 final class IssuesPresenterTests: XCTestCase {
+    let display = IssueListDisplayMock()
+    let coordinator = IssueListCoordinatorMock()
+    lazy var presenter = IssuesPresenter(coordinator: coordinator)
+    
     func test_presentItems_shouldCallDisplay_withCorrectValues() {
-        let display = IssueListDisplayMock()
         var receivedViewModels: [IssueViewModel]?
         display.displayItemsAction = { viewModels in 
             receivedViewModels = viewModels
         }
-        let presenter = IssuesPresenter()
         presenter.display = display
         let item: IssueItem = .fixture(state: .open)
         let expectedViewModel: IssueViewModel = .init(
@@ -20,5 +22,16 @@ final class IssuesPresenterTests: XCTestCase {
         presenter.present(items: [item])
         
         XCTAssertEqual(receivedViewModels, [expectedViewModel])
+    }
+    
+    func test_presentIssueDetail_shouldCallOpenIssueDetail_withCorrectValue() {
+        var receivedItem: IssueItem?
+        coordinator.openIssueDetailAction = { item in
+            receivedItem = item
+        }
+        
+        presenter.presentIssueDetail(forItem: .fixture())
+        
+        XCTAssertEqual(receivedItem, .fixture())
     }
 }

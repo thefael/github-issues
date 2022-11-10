@@ -1,5 +1,6 @@
 struct IssueItem: Decodable, Equatable {
     let title: String
+    let htmlURL: String
     let state: IssueState
     let body: String?
     let user: GithubUser
@@ -7,6 +8,7 @@ struct IssueItem: Decodable, Equatable {
     
     enum CodingKeys: String, CodingKey {
         case title
+        case htmlURL = "html_url"
         case state
         case body
         case user
@@ -32,6 +34,7 @@ struct GithubUser: Decodable, Equatable {
 extension IssueItem {
     static func fixture(
         title: String = "title",
+        htmlURL: String = "htmlURL",
         state: IssueState = .open,
         body: String = "body",
         user: GithubUser = .fixture(),
@@ -39,6 +42,7 @@ extension IssueItem {
     ) -> IssueItem {
         .init(
             title: title, 
+            htmlURL: htmlURL,
             state: state,
             body: body, 
             user: user, 
